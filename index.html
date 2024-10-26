@@ -83,20 +83,19 @@
             font-size: 1rem;
         }
 
-        .activity-card .content button {
+        .activity-card .content a {
             display: block;
             text-align: center;
             padding: 0.75rem 1rem;
             background-color: #0070f3;
             color: #000;
             font-weight: bold;
-            border: none;
             border-radius: 5px;
-            cursor: pointer;
+            text-decoration: none;
             transition: background-color 0.2s ease;
         }
 
-        .activity-card .content button:hover {
+        .activity-card .content a:hover {
             background-color: #005bb5;
         }
 
@@ -131,30 +130,6 @@
         .navigation .menu li a:hover {
             color: #0070f3;
         }
-
-        .activity-details {
-            background: #1a1a1a;
-            border: 1px solid #333;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
-            padding: 2rem;
-            margin: 3rem auto;
-            max-width: 800px;
-        }
-
-        .activity-details h2 {
-            font-size: 2rem;
-            font-weight: 700;
-            color: #f0f0f0;
-            margin-bottom: 1rem;
-        }
-
-        .activity-details p {
-            font-size: 1.25rem;
-            color: #bbb;
-            line-height: 1.6;
-            margin-bottom: 1rem;
-        }
     </style>
 </head>
 <body>
@@ -178,7 +153,7 @@
             <div class="content">
                 <h3>夏日音乐节</h3>
                 <p>加入我们，一起享受充满活力的音乐和氛围。</p>
-                <button onclick="showDetails('summer_festival')">了解更多</button>
+                <a href="summer_festival.html">了解更多</a>
             </div>
         </div>
 
@@ -187,7 +162,7 @@
             <div class="content">
                 <h3>社区健步行</h3>
                 <p>与邻居们一起在自然中放松身心，享受新鲜空气。</p>
-                <button onclick="showDetails('community_walk')">了解更多</button>
+                <a href="community_walk.html">了解更多</a>
             </div>
         </div>
 
@@ -196,7 +171,7 @@
             <div class="content">
                 <h3>创意工坊</h3>
                 <p>与艺术家们一起动手，体验创意制作的乐趣，释放你的创造力。</p>
-                <button onclick="showDetails('creative_workshop')">了解更多</button>
+                <a href="creative_workshop.html">了解更多</a>
             </div>
         </div>
 
@@ -205,7 +180,7 @@
             <div class="content">
                 <h3>美食体验日</h3>
                 <p>探索本地美食，品味来自世界各地的美味佳肴。</p>
-                <button onclick="showDetails('food_experience')">了解更多</button>
+                <a href="food_experience.html">了解更多</a>
             </div>
         </div>
 
@@ -214,61 +189,10 @@
             <div class="content">
                 <h3>瑜伽冥想日</h3>
                 <p>参加瑜伽和冥想课程，放松身心，找到内心的平静。</p>
-                <button onclick="showDetails('yoga_meditation')">了解更多</button>
+                <a href="yoga_meditation.html">了解更多</a>
             </div>
         </div>
     </div>
-
-    <div id="activity-details" class="activity-details" style="display: none;">
-        <h2 id="activity-title"></h2>
-        <p id="activity-time"></p>
-        <p id="activity-location"></p>
-        <p id="activity-description"></p>
-    </div>
-
-    <script>
-        function showDetails(activityId) {
-            const details = {
-                summer_festival: {
-                    title: '夏日音乐节',
-                    time: '时间：2024年7月15日 下午4点 - 晚上10点',
-                    location: '地点：中央公园',
-                    description: '加入我们，在夏日的中央公园享受一场充满活力的音乐节，体验现场音乐、美食和欢乐氛围。'
-                },
-                community_walk: {
-                    title: '社区健步行',
-                    time: '时间：2024年8月5日 上午9点 - 中午12点',
-                    location: '地点：绿道公园',
-                    description: '与邻居们一起在绿道公园健步行，享受新鲜的空气和健康的生活方式。'
-                },
-                creative_workshop: {
-                    title: '创意工坊',
-                    time: '时间：2024年9月10日 下午2点 - 下午5点',
-                    location: '地点：艺术中心',
-                    description: '与艺术家们一起动手，体验创意制作的乐趣，探索你的艺术潜力。'
-                },
-                food_experience: {
-                    title: '美食体验日',
-                    time: '时间：2024年10月1日 下午1点 - 下午6点',
-                    location: '地点：城市美食广场',
-                    description: '探索本地美食，品味来自世界各地的美味佳肴，与厨师互动，学习烹饪技巧。'
-                },
-                yoga_meditation: {
-                    title: '瑜伽冥想日',
-                    time: '时间：2024年11月20日 上午10点 - 中午12点',
-                    location: '地点：社区健康中心',
-                    description: '参加瑜伽和冥想课程，放松身心，找到内心的平静，适合所有级别的参与者。'
-                }
-            };
-
-            const activity = details[activityId];
-            document.getElementById('activity-title').innerText = activity.title;
-            document.getElementById('activity-time').innerText = activity.time;
-            document.getElementById('activity-location').innerText = activity.location;
-            document.getElementById('activity-description').innerText = activity.description;
-            document.getElementById('activity-details').style.display = 'block';
-        }
-    </script>
 </body>
 </html>
 
