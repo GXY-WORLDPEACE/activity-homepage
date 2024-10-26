@@ -83,19 +83,20 @@
             font-size: 1rem;
         }
 
-        .activity-card .content a {
+        .activity-card .content button {
             display: block;
             text-align: center;
             padding: 0.75rem 1rem;
             background-color: #0070f3;
             color: #000;
             font-weight: bold;
-            text-decoration: none;
+            border: none;
             border-radius: 5px;
+            cursor: pointer;
             transition: background-color 0.2s ease;
         }
 
-        .activity-card .content a:hover {
+        .activity-card .content button:hover {
             background-color: #005bb5;
         }
 
@@ -177,7 +178,7 @@
             <div class="content">
                 <h3>夏日音乐节</h3>
                 <p>加入我们，一起享受充满活力的音乐和氛围。</p>
-                <a href="#" onclick="showDetails('summer_festival')">了解更多</a>
+                <button onclick="showDetails('summer_festival')">了解更多</button>
             </div>
         </div>
 
@@ -186,7 +187,7 @@
             <div class="content">
                 <h3>社区健步行</h3>
                 <p>与邻居们一起在自然中放松身心，享受新鲜空气。</p>
-                <a href="#" onclick="showDetails('community_walk')">了解更多</a>
+                <button onclick="showDetails('community_walk')">了解更多</button>
             </div>
         </div>
 
@@ -195,7 +196,7 @@
             <div class="content">
                 <h3>创意工坊</h3>
                 <p>与艺术家们一起动手，体验创意制作的乐趣，释放你的创造力。</p>
-                <a href="#" onclick="showDetails('creative_workshop')">了解更多</a>
+                <button onclick="showDetails('creative_workshop')">了解更多</button>
             </div>
         </div>
 
@@ -204,7 +205,7 @@
             <div class="content">
                 <h3>美食体验日</h3>
                 <p>探索本地美食，品味来自世界各地的美味佳肴。</p>
-                <a href="#" onclick="showDetails('food_experience')">了解更多</a>
+                <button onclick="showDetails('food_experience')">了解更多</button>
             </div>
         </div>
 
@@ -213,7 +214,7 @@
             <div class="content">
                 <h3>瑜伽冥想日</h3>
                 <p>参加瑜伽和冥想课程，放松身心，找到内心的平静。</p>
-                <a href="#" onclick="showDetails('yoga_meditation')">了解更多</a>
+                <button onclick="showDetails('yoga_meditation')">了解更多</button>
             </div>
         </div>
     </div>
@@ -270,4 +271,6 @@
     </script>
 </body>
 </html>
+
+
 
